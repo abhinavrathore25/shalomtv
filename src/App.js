@@ -14,23 +14,24 @@ import {  useEffect } from 'react';
 function App() {
 
 const handleScroll = () => {
-    const position = window.scrollY;
-    let element = document.getElementsByClassName('customAppBar')[0];
+  const item = document.getElementsByTagName('body')[0];
 
+  const position = item.scrollTop;
+    let element = document.getElementsByClassName('customAppBar')[0];
+  
     if (position < 100) {
         element.classList.add('bigAppBar');
       } else {
       element.classList.remove('bigAppBar');
     }
-
-    console.log(position > 100)
 };
 
 useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+  const item = document.getElementsByTagName('body')[0];
 
+    item.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
-        window.removeEventListener('scroll', handleScroll);
+        item.removeEventListener('scroll', handleScroll);
     };
 }, []);
 
@@ -48,7 +49,7 @@ useEffect(() => {
         </section>
 
         <LandingPageCarousels page='home' />
-        <footer>
+        <footer style={{ marginTop: '50px' }}>
           <Footer />
         </footer>
 

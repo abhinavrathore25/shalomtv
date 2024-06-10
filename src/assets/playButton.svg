@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 95" width="95" height="95">
+	<title>Fill 1-svg</title>
+	<defs>
+		<image  width="24" height="26" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAMAAACaYWzBAAAAAXNSR0IB2cksfwAAALdQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////EIqpSQAAAD10Uk5TACeZmxTU/+RaBr0sCJ0R6WMByDOhFvV6BdthBNYp/Kf9hH72OLQa3kXxbKDRO+r7hwv+piLGJGACU9ruadyR+/MAAACaSURBVHicddLJEoJADATQcWt3EQVFEXcFV1BwQ///uyzKA1ZNJ8d+h8wkUapQLJUVqwpQrZG8jqwaTQ1a+FW7IwCMrskB6PUFACxbAAyGDgdgNHY5ABNPAExnHgdgvnA5AEsJLAFWaw6bLW3uB/S5u71D/3Gw6UiOJzrE8/9KcgijC9vHNU7oam937RqMrOfjqeXqlb4/ph5/AVc7EDu1GxnQAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2 } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s0" d="m45.2 77.4c17.3 0 31.2-13.9 31.2-31.2 0-17.2-13.9-31.2-31.2-31.2-17.2 0-31.2 14-31.2 31.2 0 17.3 14 31.2 31.2 31.2z"/>
+		<use id="Layer 1" href="#img1" x="36" y="33"/>
+	</g>
+</svg>

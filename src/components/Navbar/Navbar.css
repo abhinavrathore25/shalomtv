@@ -2,6 +2,10 @@
     backdrop-filter: blur(5px);
 }
 
+.customAppBar{
+    transition: height 100ms ease !important;
+}
+
 .navbarDrawer .MuiPaper-root {
     background-image: linear-gradient(90deg, #182738, #22354c) !important;
     color: rgba(255, 255, 255, 0.8);
@@ -13,6 +17,18 @@
     color: '#fff', 
     text-transform: 'none', backgroundImage: 'linear-gradient(90deg,#47b9d5,#39a1bb)!important', marginLeft: '30px', padding: '10px 20px'
 } */
+
+.donation{
+    color: #fff !important;
+    text-transform: none !important;
+    background-image: linear-gradient(90deg,#47b9d5,#39a1bb)!important;
+    margin-left: 30px !important;
+    padding: 10px 20px !important
+}
+
+.donation:hover{
+    background-image: linear-gradient(90deg,#39a1bb, #47b9d5)!important;
+}
 
 @media screen and (min-width: 320px) and (max-width: 992px) {
     .navbarDrawer img {

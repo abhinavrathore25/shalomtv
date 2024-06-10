@@ -9,6 +9,8 @@ import './LandingCarousel.css';
 import image1 from '../../assets/LandingCarousel/image1.jpeg';
 import image2 from '../../assets/LandingCarousel/image2.jpeg';
 import image3 from '../../assets/LandingCarousel/image3.jpeg';
+import image4 from '../../assets/LandingCarousel/image4.jpeg';
+import image5 from '../../assets/LandingCarousel/image5.jpeg';
 
 import landingkids1 from '../../assets/landingkids/landingkids1.jpeg';
 import landingkids2 from '../../assets/landingkids/landingkids2.jpeg';
@@ -18,7 +20,7 @@ import landingkids5 from '../../assets/landingkids/landingkids5.jpeg';
 
 function LandingCarousel({page}) {
 
-  const homeImages = [image1, image2, image3];
+  const homeImages = [image1, image2, image3, image4, image5];
   const kidsImages = [landingkids1, landingkids2, landingkids3, landingkids4, landingkids5];
 
   const mapimages = page === 'home' ? homeImages : kidsImages;

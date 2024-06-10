@@ -1,12 +1,12 @@
-.customCarousel{
+.customCarousel {
     overflow: visible;
 }
 
-.customCarousel::-webkit-scrollbar{
+.customCarousel::-webkit-scrollbar {
     display: none;
 }
 
-.customCarousel .swiper-wrapper .swiper-slide{
+.customCarousel .swiper-wrapper .swiper-slide {
     width: 100%;
     max-width: 183px;
     height: 100%;
@@ -16,40 +16,47 @@
     overflow: hidden;
     border-radius: 5px;
     border: 2px solid #fff3;
+    transition: transform 0.5s ease;
 }
 
-.customCarouselImage{
+.customCarouselImage {
     width: 100%;
-}
-
-.customCarouselOverlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(180deg, transparent, #2a2c42 98%);
 }
 
 .customCarousel .swiper-button-prev::after {
-    left: 30px;
     position: relative;
     display: none;
 }
 
+.carouselOverlay img {
+    display: none;
+}
+
+.carouselOverlay {
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
 .customCarousel .swiper-button-next::after {
-    right: 30px;
+    /* right: 30px; */
     position: relative;
     display: none;
+}
+
+.customCarousel .swiper-button-prev:hover::after,
+.customCarousel .swiper-button-next:hover::after {
+    background-color: #47b9d5 !important;
 }
 
 .customCarousel .swiper-button-prev::after,
 .customCarousel .swiper-button-next::after {
     color: white;
-    font-size: 60px !important;
+    font-size: 18px !important;
+    font-weight: 600;
+    padding: 13px 17px;
+    border-radius: 50%;
+    background-color: #343537 !important;
+    transition: background-color 0.3s ease;
 }
 
 @media (min-width: 1023px) and (max-width: 1920px) {
@@ -61,23 +68,40 @@
 }
 
 @media screen and (min-width: 240px) and (max-width: 540px) {
-    .customCarousel .swiper-wrapper .swiper-slide{
+    .customCarousel .swiper-wrapper .swiper-slide {
         width: 96.8px !important;
     }
 }
 
 @media screen and (min-width: 541px) and (max-width: 1024px) {
-    .customCarousel .swiper-wrapper .swiper-slide{
+    .customCarousel .swiper-wrapper .swiper-slide {
         width: 166.8px !important;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .customCarousel .swiper-wrapper .swiper-slide:hover{
+    .customCarousel .swiper-wrapper .swiper-slide:hover {
         transform: scale(1.2);
         transform-origin: center;
         z-index: 1000;
         border: 2px solid #47b9d5;
         transition: all 0.5s ease;
+    }
+
+    .carouselOverlay:hover img {
+        display: block;
+    }
+
+    .customCarousel .swiper-slide:hover .carouselOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.6);
+        transition: background 0.3s ease;
     }
 }

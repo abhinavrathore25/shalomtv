@@ -23,6 +23,8 @@ import c1 from '../../assets/kids/cartoons/c1.jpeg';
 import c2 from '../../assets/kids/cartoons/c2.jpeg';
 import c3 from '../../assets/kids/cartoons/c3.jpeg';
 
+import el1 from '../../assets/ElRuha/el1.jpeg'
+
 const carouselsArrayLanding = [
     {
         name: 'Our Channels',
@@ -36,6 +38,17 @@ const carouselsArrayLanding = [
         name: 'Abhishekagni',
         image: [abhishek],
     },
+    {
+        name: 'El Ruha',
+        image: [el1, el1, el1, el1, el1, el1, el1, el1, el1, el1, el1, el1],
+    },
+    {
+        name: 'Featured',
+        image: [
+            //10 random images from imported images
+            night1, abhishek, night2, night3, night1, el1, abhishek, night2, night3, night1, el1, night2, night3, night1
+        ],
+    }
 ]
 
 const carouselsArrayKids = [

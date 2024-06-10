@@ -87,7 +87,7 @@ function Navbar(props) {
                             </Button>
                         ))}
                         <Search sx={{ ml: '30px' }} />
-                        <Button className='donation' sx={{ display: { xs: 'none', sm: 'none', md: 'block' }, color: '#fff', textTransform: 'none', backgroundImage: 'linear-gradient(90deg,#47b9d5,#39a1bb)!important', marginLeft: '30px', padding: '10px 20px' }}>Donation</Button>
+                        <Button className='donation' sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>Donation</Button>
                     </Box>
                 </Toolbar>
             </AppBar>
