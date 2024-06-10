@@ -1,23 +1,90 @@
-import logo from './logo.svg';
+import { BottomNavigation, BottomNavigationAction, Box } from '@mui/material';
 import './App.css';
+import Footer from './components/Footer/Footer';
+import LandingCarousel from './components/LandingCarousel/LandingCarousel';
+import LandingPageCarousels from './components/LandingPageCarousels/LandingPageCarousels';
+import Navbar from './components/Navbar/Navbar';
+import { Home, Money, Search } from '@mui/icons-material';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <main>
+        <section id='shalomNavbar'>
+          <header>
+            <Navbar />
+          </header>
+        </section>
+        <section id='landingPageCarouselContainer'>
+          <LandingCarousel page='home' />
+        </section>
+
+        <LandingPageCarousels page='home' />
+        <footer>
+          <Footer />
+        </footer>
+
+        <Box sx={{ textAlign: 'center', color: 'white', fontSize: '14px' }} className='copyright'>
+          <hr />
+          © Copyright 2023 Shalom Television All Right Reserved
+        </Box>
+
+        <section>
+          <BottomNavigation
+            showLabels
+            className="customBottomNav"
+          >
+            <BottomNavigationAction label="Home" icon={<Home />} />
+            <BottomNavigationAction label="Search" icon={<Search />} />
+            <BottomNavigationAction label="Donate" icon={<Money />} />
+          </BottomNavigation>
+        </section>
+      </main>,
+    },
+    {
+      path: "/kids",
+      element: <main>
+        <section id='shalomNavbar'>
+          <header>
+            <Navbar />
+          </header>
+        </section>
+        <section id='landingPageCarouselContainer'>
+          <LandingCarousel page='kids' />
+        </section>
+
+        <LandingPageCarousels page='kids' />
+        <footer>
+          <Footer />
+        </footer>
+
+        <Box sx={{ textAlign: 'center', color: 'white', fontSize: '14px' }} className='copyright'>
+          <hr />
+          © Copyright 2023 Shalom Television All Right Reserved
+        </Box>
+
+        <section>
+          <BottomNavigation
+            showLabels
+            className="customBottomNav"
+          >
+            <BottomNavigationAction label="Home" icon={<Home />} />
+            <BottomNavigationAction label="Search" icon={<Search />} />
+            <BottomNavigationAction label="Donate" icon={<Money />} />
+          </BottomNavigation>
+        </section>
+      </main>,
+    },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router} />
     </div>
   );
 }

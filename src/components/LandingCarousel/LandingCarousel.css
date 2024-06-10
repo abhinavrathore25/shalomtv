@@ -1,0 +1,60 @@
+.landingCarouselImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.landingCarouselOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, transparent, #2a2c42 98%);
+}
+
+.landingCarousel .swiper-pagination{
+    bottom: 30px;
+}
+
+.landingCarousel .swiper-pagination-bullet{
+    background: rgba(255, 255, 255);
+    opacity: 1;
+}
+
+.landingCarousel .swiper-pagination-bullet-active {
+    width: 20px;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    background: #47b9d5;
+}
+
+.landingCarousel .swiper-button-prev::after {
+    left: 30px;
+    position: relative;
+    display: none;
+}
+
+.landingCarousel .swiper-button-next::after {
+    right: 30px;
+    position: relative;
+    display: none;
+}
+
+.landingCarousel .swiper-button-prev::after,
+.landingCarousel .swiper-button-next::after {
+    color: white;
+    font-size: 60px !important;
+}
+
+@media (min-width: 1023px) and (max-width: 1920px) {
+
+    .landingCarousel:hover .swiper-button-prev::after,
+    .landingCarousel:hover .swiper-button-next::after {
+        display: block;
+    }
+}

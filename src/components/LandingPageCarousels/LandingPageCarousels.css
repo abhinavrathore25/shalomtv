@@ -1,0 +1,25 @@
+.carouselSections{
+    margin: 0 25px;
+  }
+
+.carouselHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carouselHeading .viewAll{
+    color: #47b9d5;
+}
+
+@media screen and (min-width: 1000px) {
+    .carouselSections{
+        margin: 0 50px;
+      }
+}
+
+@media screen and (min-width: 1200px) {
+    .carouselSections{
+        margin: 0 65px;
+      }
+}

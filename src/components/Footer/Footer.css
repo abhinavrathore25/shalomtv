@@ -1,0 +1,32 @@
+.horizontalList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 25px;
+}
+
+.horizontalList li {
+    padding: 2px 8px;
+}
+
+.downloadButton {
+    width: 80px;
+}
+
+.downloadButtons {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15%;
+}
+
+footer {
+    margin-top: 15px;
+    background-color: #12152c;
+    padding: 14px 0;
+}

@@ -1,0 +1,43 @@
+.navbarDrawer {
+    backdrop-filter: blur(5px);
+}
+
+.navbarDrawer .MuiPaper-root {
+    background-image: linear-gradient(90deg, #182738, #22354c) !important;
+    color: rgba(255, 255, 255, 0.8);
+    width: 80% !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* .donationButton {
+    color: '#fff', 
+    text-transform: 'none', backgroundImage: 'linear-gradient(90deg,#47b9d5,#39a1bb)!important', marginLeft: '30px', padding: '10px 20px'
+} */
+
+@media screen and (min-width: 320px) and (max-width: 992px) {
+    .navbarDrawer img {
+        width: 70px !important;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .donationButton {
+        display: block !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .customLogo{
+        width: 60px !important;
+    }
+
+    .customAppBar{
+        height: 80px !important;
+    }
+
+    .customToolbar {
+        padding: 10px 65px !important;
+    }
+}
