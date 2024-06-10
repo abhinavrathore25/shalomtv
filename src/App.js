@@ -9,8 +9,31 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import {  useEffect } from 'react';
 
 function App() {
+
+const handleScroll = () => {
+    const position = window.scrollY;
+    let element = document.getElementsByClassName('customAppBar')[0];
+
+    if (position < 100) {
+        element.classList.add('bigAppBar');
+      } else {
+      element.classList.remove('bigAppBar');
+    }
+
+    console.log(position > 100)
+};
+
+useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
+
   const router = createBrowserRouter([
     {
       path: "/",

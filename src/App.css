@@ -1,3 +1,7 @@
+html, body, .App{
+  overflow-x: hidden;
+}
+
 .copyright{
   background-color: #12152c;
   padding-bottom: 15px;

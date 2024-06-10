@@ -8,10 +8,10 @@ const CustomCarousel = ({ channelName, items }) => {
     return (
         <Swiper
             className='customCarousel'
-            slidesPerView={3}
+            slidesPerView='auto'
             spaceBetween={10}
             // slidesPerGroup={3}
-            loopFillGroupWithBlank={true}
+            // loopFillGroupWithBlank={true}
             navigation
             modules={[Navigation]}
         >

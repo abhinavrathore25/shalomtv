@@ -27,14 +27,26 @@
     }
 }
 
+.shalomTelevision{
+    display: none;
+}
+
 @media screen and (min-width: 1200px) {
+
+    .shalomTelevision{
+        display: block;
+    }
+
+    .bigAppBar{
+        background: linear-gradient(180deg, #000 10%, transparent) !important;
+        height: 150px !important;
+        transition: height 2000 ease;
+        width: calc(100% - 10px) !important;
+        left: 0 !important;
+    }
 
     .customLogo{
         width: 60px !important;
-    }
-
-    .customAppBar{
-        height: 80px !important;
     }
 
     .customToolbar {

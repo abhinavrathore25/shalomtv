@@ -41,7 +41,7 @@ function Navbar(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left', boxShadow: 'none' }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left', boxShadow: 'none'}}>
             <img srcSet={logo_shalom} width='50px' alt="logo" loading='lazy' />
             <List>
                 {navItems.map((item) => (
@@ -60,10 +60,14 @@ function Navbar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar className='customAppBar' component="nav" sx={{ height: '66px', backgroundColor: '#142738' }}>
+            <AppBar className='customAppBar bigAppBar' component="nav" sx={{ height: '66px', backgroundColor: '#142738', boxShadow: 'none' }}>
                 <Toolbar className='customToolbar' display="flex" sx={{ padding: '3px 25px' }} style={{ alignItems: 'center' ,justifyContent: 'space-between' }}>
 
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
                     <img srcSet={logo_shalom} width='50px' alt="logo" className='customLogo' loading='lazy'  />
+                    <p style={{marginLeft: '10px'}} className='shalomTelevision'>Shalom Television</p>
+                    </div>
+
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                         <Search sx={{ marginRight: '20px', display: { sm: 'none' } }} />
                         <IconButton

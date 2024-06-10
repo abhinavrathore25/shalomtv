@@ -1,6 +1,10 @@
-/* .customCarousel{
-    overflow-y: ;
-} */
+.customCarousel{
+    overflow: visible;
+}
+
+.customCarousel::-webkit-scrollbar{
+    display: none;
+}
 
 .customCarousel .swiper-wrapper .swiper-slide{
     width: 100%;
@@ -12,14 +16,6 @@
     overflow: hidden;
     border-radius: 5px;
     border: 2px solid #fff3;
-}
-
-.customCarousel .swiper-wrapper .swiper-slide:hover{
-    /* transform: scale(1.2); */
-    transform-origin: center;
-    z-index: 1000;
-    border: 2px solid #47b9d5;
-    transition: all 0.5s ease;
 }
 
 .customCarouselImage{
@@ -61,5 +57,27 @@
     .customCarousel:hover .swiper-button-prev::after,
     .customCarousel:hover .swiper-button-next::after {
         display: block;
+    }
+}
+
+@media screen and (min-width: 240px) and (max-width: 540px) {
+    .customCarousel .swiper-wrapper .swiper-slide{
+        width: 96.8px !important;
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 1024px) {
+    .customCarousel .swiper-wrapper .swiper-slide{
+        width: 166.8px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .customCarousel .swiper-wrapper .swiper-slide:hover{
+        transform: scale(1.2);
+        transform-origin: center;
+        z-index: 1000;
+        border: 2px solid #47b9d5;
+        transition: all 0.5s ease;
     }
 }
