@@ -32,8 +32,8 @@ const navItems = [{
 function Navbar(props) {
 
     const navigate = useNavigate();
-    const handleNavigation = () => {
-        navigate('/');
+    const handleNavigation = (path) => {
+        navigate(path);
         document.getElementsByTagName('body')[0].scrollTo(0, 0);
     }
 
@@ -46,12 +46,12 @@ function Navbar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left', boxShadow: 'none'}}>
-            <img srcSet={logo_shalom} width='50px' alt="logo" loading='lazy'onClick={handleNavigation} />
+            <img srcSet={logo_shalom} width='50px' alt="logo" loading='lazy' onClick={() => handleNavigation('/')} />
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.name} disablePadding>
                         <ListItemButton sx={{ textAlign: 'left' }}>
-                            <ListItemText primary={item.name} onClick={() => navigate(item.link)} />
+                            <ListItemText primary={item.name} onClick={() => handleNavigation(item.link)} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -68,7 +68,7 @@ function Navbar(props) {
                 <Toolbar className='customToolbar' display="flex" sx={{ padding: '3px 25px' }} style={{ alignItems: 'center' ,justifyContent: 'space-between' }}>
 
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <img srcSet={logo_shalom} width='50px' alt="logo" className='customLogo' loading='lazy' onClick={handleNavigation} />
+                    <img srcSet={logo_shalom} width='50px' alt="logo" className='customLogo' loading='lazy' onClick={() =>handleNavigation('/')} />
                     <p style={{marginLeft: '10px'}} className='shalomTelevision'>Shalom Television</p>
                     </div>
 
@@ -86,7 +86,7 @@ function Navbar(props) {
                     </div>
                     <Box sx={{ display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}>
                         {navItems.map((item) => (
-                            <Button key={item.name} sx={{ color: '#fff' }} onClick={() => {navigate(item.link)}}>
+                            <Button key={item.name} sx={{ color: '#fff' }} onClick={() => handleNavigation(item.link)}>
                                 {item.name}
                             </Button>
                         ))}
