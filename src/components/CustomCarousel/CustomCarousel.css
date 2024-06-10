@@ -37,6 +37,27 @@
     transition: background 0.3s ease;
 }
 
+.carouselOverlay:hover img {
+    display: block;
+}
+
+.customCarousel .swiper-slide:hover .carouselOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease;
+}
+
+.customCarousel .swiper-wrapper .swiper-slide:hover {
+    border: 2px solid #47b9d5;
+}
+
 .customCarousel .swiper-button-next::after {
     /* right: 30px; */
     position: relative;
@@ -86,22 +107,5 @@
         z-index: 1000;
         border: 2px solid #47b9d5;
         transition: all 0.5s ease;
-    }
-
-    .carouselOverlay:hover img {
-        display: block;
-    }
-
-    .customCarousel .swiper-slide:hover .carouselOverlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.6);
-        transition: background 0.3s ease;
     }
 }

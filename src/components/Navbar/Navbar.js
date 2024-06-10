@@ -32,6 +32,10 @@ const navItems = [{
 function Navbar(props) {
 
     const navigate = useNavigate();
+    const handleNavigation = () => {
+        navigate('/');
+        document.getElementsByTagName('body')[0].scrollTo(0, 0);
+    }
 
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -42,7 +46,7 @@ function Navbar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'left', boxShadow: 'none'}}>
-            <img srcSet={logo_shalom} width='50px' alt="logo" loading='lazy' />
+            <img srcSet={logo_shalom} width='50px' alt="logo" loading='lazy'onClick={handleNavigation} />
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.name} disablePadding>
@@ -64,7 +68,7 @@ function Navbar(props) {
                 <Toolbar className='customToolbar' display="flex" sx={{ padding: '3px 25px' }} style={{ alignItems: 'center' ,justifyContent: 'space-between' }}>
 
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <img srcSet={logo_shalom} width='50px' alt="logo" className='customLogo' loading='lazy'  />
+                    <img srcSet={logo_shalom} width='50px' alt="logo" className='customLogo' loading='lazy' onClick={handleNavigation} />
                     <p style={{marginLeft: '10px'}} className='shalomTelevision'>Shalom Television</p>
                     </div>
 
